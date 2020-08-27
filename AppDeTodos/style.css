@@ -1,0 +1,46 @@
+body {
+    width: 100%;
+    height: 100%;
+    background: #131417;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#app {
+    width: 25rem;
+    height: 100vh;
+    color: #9e9e9e;
+    background: rgb(0, 0, 0);
+    font: 700 20px arial;
+    padding: 2rem;
+    line-height: 1.8rem;
+}
+
+#app input {
+    width: 12rem;
+    height: 1.5rem;
+    margin-top: 1rem;
+    border: 2px solid #202227;
+    border-radius: 0.8rem;
+    padding-left: 0.6rem;
+}
+
+#app a {
+    text-decoration: none;
+    margin-left: 1rem;
+    color: #e32f0f;
+}
+
+#app button {
+    width: 5rem;
+    height: 1.4rem;
+    border: none;
+    border-radius: 3px;
+    font: 400 12px Arial;
+    color: #ffffff;
+    background: #e32f0f;
+}
