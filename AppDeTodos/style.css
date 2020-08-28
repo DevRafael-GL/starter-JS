@@ -1,7 +1,7 @@
 body {
     width: 100%;
     height: 100%;
-    background: #131417;
+    background: url("/AppDeTodos/pexels-wendy-van-zyl-1112048.jpg");
 }
 
 * {
@@ -10,14 +10,70 @@ body {
     box-sizing: border-box;
 }
 
+.top {
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* padding: 0 5rem; */
+    width: 100%;
+    height: 4.5rem;
+    background: #191a1a;
+    z-index: 1;
+
+    font: 700 18px Arial;
+    color: white;
+}
+
+.data {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    color: #cf3d43;
+    font: bold 25px Arial;
+}
+
+.top input {
+    width: 13rem;
+    font: 700 18px Arial;
+    padding-left: 0.8rem;    
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+}
+
+#app.active {
+    left: 0;
+}
+
 #app {
-    width: 25rem;
-    height: 100vh;
+    position: fixed;
+    width: 24rem;
+    height: 100%;
     color: #9e9e9e;
-    background: rgb(0, 0, 0);
+    background: #111111;
     font: 700 20px arial;
     padding: 2rem;
+    left: -385px;
     line-height: 1.8rem;
+    z-index: 0;
+    transition: 0.5s;
+    top: 71px;
+}
+
+.menu {
+    position: absolute; 
+    right: -50px;
+    text-align: center;
+    top: 50px;
+    width: 50px;
+    line-height: 50px;
+    background: #111111; 
+
 }
 
 #app input {
@@ -32,7 +88,7 @@ body {
 #app a {
     text-decoration: none;
     margin-left: 1rem;
-    color: #e32f0f;
+    color: #cf3d43;
 }
 
 #app button {
@@ -42,5 +98,14 @@ body {
     border-radius: 3px;
     font: 400 12px Arial;
     color: #ffffff;
-    background: #e32f0f;
+    background: #cf3d43;
+}
+
+
+
+.main {
+    width: 60%;
+    height: 100%;
+    margin: 0 auto;
+    background: rgb(156, 156, 156);
 }

@@ -50,3 +50,35 @@ function deleteTodo(pos) {
 function saveToStorage() {
     localStorage.setItem('list_todos', JSON.stringify(todos))
 }
+
+
+
+document.querySelectorAll('#app > .menu').forEach(menu=>{
+    menu.addEventListener('click' ,ev=>{
+        ev.preventDefault()
+        menu.parentNode.classList.toggle('active')
+})
+})
+
+function relogio() {
+    var data = new Date()
+    var horas = data.getHours()
+    var minutos = data.getMinutes()
+    var segundos = data.getSeconds()
+
+    if(horas < 10) {
+        horas = "0" + horas
+    }
+
+    if(minutos < 10) {
+        minutos = "0" + minutos
+    }
+
+    if(segundos < 10) {
+        segundos = "0" + segundos
+    }
+
+    document.querySelector('.data').innerHTML=horas+":"+minutos+":"+segundos;
+}
+
+window.setInterval("relogio()", 1000)
