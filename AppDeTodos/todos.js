@@ -1,84 +1,83 @@
-var listElement = document.querySelector('#app ul')
-var inputElement = document.querySelector('#app input')
-var buttonElement = document.querySelector('#app button')
+var listElement = document.querySelector("#app ul");
+var inputElement = document.querySelector("#app input");
+var buttonElement = document.querySelector("#app button");
 
-var todos = JSON.parse(localStorage.getItem('list_todos')) || [];
+var todos = JSON.parse(localStorage.getItem("list_todos")) || [];
 
 function renderTodos() {
-    listElement.innerHTML = '';
+  listElement.innerHTML = "";
 
-    for (todo of todos) {
-        var todoElement = document.createElement('li')
-        var todoText = document.createTextNode(todo)
+  for (todo of todos) {
+    var todoElement = document.createElement("li");
+    var todoText = document.createTextNode(todo);
 
-        var linkElement = document.createElement('a');
+    var linkElement = document.createElement("a");
 
-        linkElement.setAttribute('href', '#');
+    linkElement.setAttribute("href", "#");
 
-        var pos = todos.indexOf(todo);
-        linkElement.setAttribute('onclick', 'deleteTodo('+ pos +')')
+    var pos = todos.indexOf(todo);
+    linkElement.setAttribute("onclick", "deleteTodo(" + pos + ")");
 
-        var linkText = document.createTextNode('🗑 Excluir')
+    var linkText = document.createTextNode("🗑 Excluir");
 
-        linkElement.appendChild(linkText)
+    linkElement.appendChild(linkText);
 
-        todoElement.appendChild(todoText)
-        todoElement.appendChild(linkElement)
-        listElement.appendChild(todoElement)
-    }
+    todoElement.appendChild(todoText);
+    todoElement.appendChild(linkElement);
+    listElement.appendChild(todoElement);
+  }
 }
 
 renderTodos();
 
 function addTodo() {
-    var todoText = inputElement.value;
+  var todoText = inputElement.value;
 
-    todos.push(todoText);
-    inputElement.value = '';
-    renderTodos();
-    saveToStorage()
+  todos.push(todoText);
+  inputElement.value = "";
+  renderTodos();
+  saveToStorage();
 }
 
 buttonElement.onclick = addTodo;
 
 function deleteTodo(pos) {
-    todos.splice(pos, 1);
-    renderTodos()
-    saveToStorage()
+  todos.splice(pos, 1);
+  renderTodos();
+  saveToStorage();
 }
 
 function saveToStorage() {
-    localStorage.setItem('list_todos', JSON.stringify(todos))
+  localStorage.setItem("list_todos", JSON.stringify(todos));
 }
 
-
-
-document.querySelectorAll('#app > .menu').forEach(menu=>{
-    menu.addEventListener('click' ,ev=>{
-        ev.preventDefault()
-        menu.parentNode.classList.toggle('active')
-})
-})
+document.querySelectorAll("#app > .menu").forEach((menu) => {
+  menu.addEventListener("click", (ev) => {
+    ev.preventDefault();
+    menu.parentNode.classList.toggle("active");
+  });
+});
 
 function relogio() {
-    var data = new Date()
-    var horas = data.getHours()
-    var minutos = data.getMinutes()
-    var segundos = data.getSeconds()
+  var data = new Date();
+  var horas = data.getHours();
+  var minutos = data.getMinutes();
+  var segundos = data.getSeconds();
 
-    if(horas < 10) {
-        horas = "0" + horas
-    }
+  if (horas < 10) {
+    horas = "0" + horas;
+  }
 
-    if(minutos < 10) {
-        minutos = "0" + minutos
-    }
+  if (minutos < 10) {
+    minutos = "0" + minutos;
+  }
 
-    if(segundos < 10) {
-        segundos = "0" + segundos
-    }
+  if (segundos < 10) {
+    segundos = "0" + segundos;
+  }
 
-    document.querySelector('.data').innerHTML=horas+":"+minutos+":"+segundos;
+  document.querySelector(".data").innerHTML =
+    horas + ":" + minutos + ":" + segundos;
 }
 
-window.setInterval("relogio()", 1000)
+window.setInterval("relogio()", 1000);
