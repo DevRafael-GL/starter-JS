@@ -85,14 +85,14 @@ window.setInterval("relogio()", 1000);
 var btn = document.querySelector(".ct");
 
 btn.addEventListener("click", clicar);
-btn.addEventListener("mouseout", sair);
+btn.addEventListener("mouseenter", entrar);
 
-function clicar() {
+function entrar() {
   btn.innerHTML = "Loading...";
   btn.style.background = "#cf3d43";
 }
 
-function sair() {
+function clicar() {
   btn.innerHTML = "Concluido";
   btn.style.background = "#75d846";
 }
