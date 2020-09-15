@@ -1,6 +1,6 @@
-var listElement = document.querySelector("#app ul");
-var inputElement = document.querySelector("#app input");
-var buttonElement = document.querySelector("#app button");
+const listElement = document.querySelector("#app ul");
+const inputElement = document.querySelector("#app input");
+const buttonElement = document.querySelector("#app button");
 
 var todos = JSON.parse(localStorage.getItem("list_todos")) || [];
 
@@ -8,17 +8,17 @@ function renderTodos() {
   listElement.innerHTML = "";
 
   for (todo of todos) {
-    var todoElement = document.createElement("li");
-    var todoText = document.createTextNode(todo);
+    let todoElement = document.createElement("li");
+    let todoText = document.createTextNode(todo);
 
-    var linkElement = document.createElement("a");
+    let linkElement = document.createElement("a");
 
     linkElement.setAttribute("href", "#");
 
-    var pos = todos.indexOf(todo);
+    let pos = todos.indexOf(todo);
     linkElement.setAttribute("onclick", "deleteTodo(" + pos + ")");
 
-    var linkText = document.createTextNode("🗑 Excluir");
+    let linkText = document.createTextNode("🗑 Excluir");
 
     linkElement.appendChild(linkText);
 
@@ -31,7 +31,7 @@ function renderTodos() {
 renderTodos();
 
 function addTodo() {
-  var todoText = inputElement.value;
+  let todoText = inputElement.value;
 
   todos.push(todoText);
   inputElement.value = "";
@@ -59,10 +59,10 @@ document.querySelectorAll("#app > .menu").forEach((menu) => {
 });
 
 function relogio() {
-  var data = new Date();
-  var horas = data.getHours();
-  var minutos = data.getMinutes();
-  var segundos = data.getSeconds();
+  let data = new Date();
+  let horas = data.getHours();
+  let minutos = data.getMinutes();
+  let segundos = data.getSeconds();
 
   if (horas < 10) {
     horas = "0" + horas;
