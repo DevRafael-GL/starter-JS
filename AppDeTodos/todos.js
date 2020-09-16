@@ -82,7 +82,7 @@ function relogio() {
 
 window.setInterval("relogio()", 1000);
 
-var btn = document.querySelector(".ct");
+const btn = document.querySelector(".ct");
 
 btn.addEventListener("click", clicar);
 btn.addEventListener("mouseenter", entrar);
