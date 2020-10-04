@@ -34,6 +34,10 @@ body {
   font: bold 25px Arial;
 }
 
+.data.fullScreen {
+  font-size: 220%;
+}
+
 .top input {
   width: 13rem;
   font: 700 18px Arial;
@@ -118,3 +122,5 @@ body {
   border: none;
   transition: 0.60s;
 }
+
+

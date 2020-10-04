@@ -96,3 +96,16 @@ function clicar() {
   btn.innerHTML = "Concluido";
   btn.style.background = "#75d846";
 }
+
+
+const full = document.querySelector('.data')
+
+
+function fullscreen(event) {
+  if (event.key === 'f') {
+    console.log('clicou F')
+    full.classList.toggle('fullScreen')
+  }
+}
+
+document.addEventListener('keydown', fullscreen)
