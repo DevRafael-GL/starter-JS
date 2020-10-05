@@ -1,29 +1,35 @@
 <html>
+  <head>
+    <title>Curso Javascript</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Girassol&family=Lobster&display=swap"
+      rel="stylesheet"
+    />
+  </head>
 
-<head>
-  <title>Curso Javascript</title>
-  <link rel="stylesheet" href="style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Girassol&family=Lobster&display=swap" rel="stylesheet" />
-</head>
-
-<body onload="relogio()">
-  <header>
-    <div class="top">
-      <div class="data"></div>
+  <body onload="relogio()">
+    <header>
+      <div class="top">
+        <div class="data"></div>
+      </div>
+    </header>
+    <div class="main" id="principal">
+      <button class="ct">Codificando...</button>
     </div>
-  </header>
-  <div class="main" id="principal">
-    <button class="ct">Codificando...</button>
-  </div>
-  <div class="container">
-    <div id="app">
-      <ul></ul>
-      <input class="leng" type="text" placeholder="Digite um todo" maxlength="19" />
-      <button>Adicionar</button>
-      <a class="menu" href="#menu">☰</a>
+    <div class="container">
+      <div id="app">
+        <ul></ul>
+        <input
+          class="leng"
+          type="text"
+          placeholder="Digite um todo"
+          maxlength="19"
+        />
+        <button>Adicionar</button>
+        <a class="menu" href="#menu">☰</a>
+      </div>
     </div>
-  </div>
-  <script src="/AppDeTodos/todos.js"></script>
-</body>
-
+    <script src="/AppDeTodos/todos.js"></script>
+  </body>
 </html>
