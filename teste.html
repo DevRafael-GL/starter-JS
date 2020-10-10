@@ -37,6 +37,12 @@
           opacity: 0;
         }
       }
+
+      .fullScreen {
+        border-radius: 2rem;
+        background: #390a63;
+        font-size: 250%;
+      }
     </style>
 
     <h1>Cursos de ux/ui design e Front end na origamid</h1>
@@ -52,6 +58,14 @@
 
       const titulo = document.querySelector("h1");
       treinando(titulo);
+
+      function fullScreen(event){
+        if(event.key === 'f'){
+          titulo.classList.toggle('fullScreen')
+        }
+      }
+
+      document.addEventListener('keydown', fullScreen)
     </script>
   </body>
 </html>
