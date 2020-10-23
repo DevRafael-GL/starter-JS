@@ -84,8 +84,8 @@ window.setInterval("relogio()", 1000);
 
 const btn = document.querySelector(".ct");
 
-btn.addEventListener("click", clicar);
-btn.addEventListener("mouseenter", entrar);
+// btn.addEventListener("click", clicar);
+// btn.addEventListener("mouseenter", entrar);
 
 function entrar() {
   btn.innerHTML = "Loading...";
@@ -107,3 +107,6 @@ function fullscreen(event) {
 }
 
 document.addEventListener("keydown", fullscreen);
+
+const images = document.querySelectorAll('img')
+console.log(images)

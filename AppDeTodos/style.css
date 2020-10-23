@@ -109,8 +109,8 @@ body {
   height: 100%;
   margin: 0 auto;
   background: #0e1013a8;
-  justify-content: center;
-  align-items: center;
+  /* justify-content: center; */
+  /* align-items: center; */
 }
 
 .ct {
@@ -121,4 +121,45 @@ body {
   border-radius: 3px;
   border: none;
   transition: 0.6s;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+.galeria {
+  width: 19.9rem;
+  height: 370px;
+  overflow: auto;
+  margin-top: 12rem;
+}
+
+.galeria::-webkit-scrollbar {
+  width: 18px;
+}
+
+.galeria::-webkit-scrollbar-thumb {
+  background: #cf3d43;
+  border-left: 4px solid #faf6ed;
+  border-right: 4px solid #faf6ed;
+}
+
+.galeria::-webkit-scrollbar-track {
+  background: #faf6ed;
+}
+
+.centro {
+  width: 70%;
+  height: 38%;
+  margin: 12rem auto 0;
+  border-radius: 1.8rem;
+  background: rgb(215, 235, 235);
+  overflow: auto;
+  padding: 2rem;
+}
+
+.centro p {
+  font: 800 13px arial;
+  justify-content: center;
 }
