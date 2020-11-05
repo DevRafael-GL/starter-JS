@@ -129,10 +129,10 @@ img {
 }
 
 .galeria {
-  width: 19.9rem;
-  height: 370px;
+  width: 17rem;
+  height: 339px;
   overflow: auto;
-  margin-top: 12rem;
+  margin: 12rem 1.4rem 0;
 }
 
 .galeria::-webkit-scrollbar {
@@ -151,8 +151,8 @@ img {
 
 .centro {
   width: 70%;
-  height: 38%;
-  margin: 12rem auto 0;
+  height: 35%;
+  margin: 12rem 0 0;
   border-radius: 1.8rem;
   background: rgb(215, 235, 235);
   overflow: auto;
