@@ -133,6 +133,7 @@ img {
   height: 339px;
   overflow: auto;
   margin: 12rem 1.4rem 0;
+  border-radius: 1rem;
 }
 
 .galeria::-webkit-scrollbar {
@@ -162,4 +163,31 @@ img {
 .centro p {
   font: 800 13px arial;
   justify-content: center;
+}
+
+li {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.js-tabcontent section {
+  display: none;
+}
+
+.js-tabcontent section.ativo {
+  display: block !important;
+  animation: show 0.5s forwards;
+}
+
+@keyframes show {
+  from {
+    opacity: 0;
+    transform: translate3d(-30px, 0, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
 }
