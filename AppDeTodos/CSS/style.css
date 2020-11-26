@@ -90,7 +90,7 @@ body {
 #app a {
   text-decoration: none;
   margin-left: 1rem;
-  color: #cf3d43;
+  color: #8c5101;
 }
 
 #app button {
@@ -100,7 +100,7 @@ body {
   border-radius: 3px;
   font: 400 12px Arial;
   color: #fffffffd;
-  background: #cf3d43;
+  background: #8c5101;
 }
 
 .main {
