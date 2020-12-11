@@ -232,17 +232,6 @@ h1 {
   font-family: "Goldman", cursive;
 }
 
-.copy {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  height: 4.5rem;
-  background: #191a1a;
-  font: 700 18px Arial;
-  color: white;
-}
-
 .teste {
   width: 100%;
   height: 32rem;
